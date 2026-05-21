@@ -49,14 +49,12 @@ function create_quiz (){
 };
 function button_push1 (){
   if (button1.textContent == "スタート！"){
-    button2.innerHTML = '<button id="<button">右が大</button>'
+    button2.innerHTML = '    <button id="<button">右が大</button>'
     button3.innerHTML = '<button id=">butoon">左が大</button>'
     button1.innerHTML = '<button id="m_button" hidden></button>'
     create_quiz();
-    document.getElementById('quiz').innerHTML = `    <section id="quiz">
-      <h2　id="text1">JavaScript式√どっちが大きい?</h2>
-      <h2 id="text2">${quiz1}　${quiz2}</h2>
-    </section>`
+    document.getElementById('quiz').innerHTML = `      <h2　id="text1">JavaScript式√どっちが大きい?</h2>
+      <h2 id="text2">${quiz1}　${quiz2}</h2>`
   }else if(button1.textContent == "次の問題へ"){
     button2.innerHTML = '<button id="<button">右が大</button>'
     button3.innerHTML = '<button id=">butoon">左が大</button>'
