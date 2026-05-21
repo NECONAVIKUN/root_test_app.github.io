@@ -3,9 +3,19 @@ let quiz2 = "";
 let q1 = "";
 let q2 = "";
 function t (){
+  document.getElementById('buttons').innerHTML = `        <button id="<button" hidden>右が大</button>
+        <button id=">button" hidden>左が大</button>
+        <button id="m_button">次の問題へ</button>`
+  document.getElementById('quiz').innerHTML = `      <h2　id="text1">おめでとう</h2>
+      <h2 id="text2" hidden></h2>`
   alert("正解！");
 }
 function f (){
+  document.getElementById('quiz').innerHTML = `      <h2　id="text1">残念</h2>
+      <h2 id="text2" hidden></h2>`
+  document.getElementById('buttons').innerHTML = `        <button id="<button" hidden>右が大</button>
+        <button id=">button" hidden>左が大</button>
+        <button id="m_button">次の問題へ</button>`
   alert("不正解！")
 }
 const button1 = document.getElementById('m_button');
@@ -19,32 +29,32 @@ function create_quiz (){
   if (rdm1 == "1"){
     if (rdm5 == "1"){
       var rdm2 = Math.floor( Math.random() * 99) + 1;
-      let quiz1 = "-√" + rdm2;
-      let q1 = -1*rdm2;
+       quiz1 = "-√" + rdm2;
+       q1 = -1*rdm2;
     }else{
       var rdm2 = Math.floor( Math.random() * 99) + 1;
-      let quiz1 = "√" + rdm2;
-      let q1 = rdm2;
+      quiz1 = "√" + rdm2;
+      q1 = rdm2;
     };
   } else {
     var rdm2 = Math.floor( Math.random() * 99) + 1;
-    let quiz1 = rdm2;
-    let q1 = rdm2*rdm2;
+    quiz1 = rdm2;
+    q1 = rdm2*rdm2;
   };
   if (rdm3 == "1"){
     if (rdm6 == "1"){
       var rdm4 = Math.floor( Math.random() * 99) + 1;
-      let quiz2 = "-√" + rdm4;
-      let q2 = "-" + rdm4;
+      quiz2 = "-√" + rdm4;
+      q2 = "-" + rdm4;
     }else{
       var rdm4 = Math.floor( Math.random() * 99) + 1;
-      let quiz2 = "√" + rdm4;
-      let q2 = rdm4;
+      quiz2 = "√" + rdm4;
+      q2 = rdm4;
     }
   }else {
     var rdm4 = Math.floor( Math.random() * 99) + 1;
-    let quiz2 = rdm4;
-    let q2 = rdm4*rdm4;
+    quiz2 = rdm4;
+    q2 = rdm4*rdm4;
   };
 };
 function button_push1 (){
