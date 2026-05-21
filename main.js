@@ -28,31 +28,31 @@ function create_quiz (){
   var rdm6 = Math.round(Math.random());
   if (rdm1 == "1"){
     if (rdm5 == "1"){
-      var rdm2 = Math.floor( Math.random() * 99) + 1;
+      var rdm2 = Number(Math.floor( Math.random() * 99) + 1);
        quiz1 = "-√" + rdm2;
        q1 = -1*rdm2;
     }else{
-      var rdm2 = Math.floor( Math.random() * 99) + 1;
+      var rdm2 = Number(Math.floor( Math.random() * 99) + 1);
       quiz1 = "√" + rdm2;
       q1 = rdm2;
     };
   } else {
-    var rdm2 = Math.floor( Math.random() * 99) + 1;
+    var rdm2 = Number(Math.floor( Math.random() * 99) + 1);
     quiz1 = rdm2;
     q1 = rdm2*rdm2;
   };
   if (rdm3 == "1"){
     if (rdm6 == "1"){
-      var rdm4 = Math.floor( Math.random() * 99) + 1;
+      var rdm4 = Number(Math.floor( Math.random() * 99) + 1);
       quiz2 = "-√" + rdm4;
       q2 = "-" + rdm4;
     }else{
-      var rdm4 = Math.floor( Math.random() * 99) + 1;
+      var rdm4 = Number(Math.floor( Math.random() * 99) + 1);
       quiz2 = "√" + rdm4;
       q2 = rdm4;
     }
   }else {
-    var rdm4 = Math.floor( Math.random() * 99) + 1;
+    var rdm4 = Number(Math.floor( Math.random() * 99) + 1);
     quiz2 = rdm4;
     q2 = rdm4*rdm4;
   };
