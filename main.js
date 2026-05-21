@@ -2,25 +2,29 @@ let quiz1 = "";
 let quiz2 = "";
 let q1 = "";
 let q2 = "";
+const button1 = document.getElementById('m_button');
+const button2 = document.getElementById('<button');
+const button3 = document.getElementById('>button');
 function t (){
   document.getElementById('buttons').innerHTML = `        <button id="<button" hidden>右が大</button>
         <button id=">button" hidden>左が大</button>
         <button id="m_button">次の問題へ</button>`
-  document.getElementById('quiz').innerHTML = `      <h2　id="text1">おめでとう</h2>
-      <h2 id="text2" hidden></h2>`
+  button1.hidden = false;
+  button2.hidden = true;
+  button3.hidden = true;
+  button1.textContent = "次の問題へ"
   alert("正解！");
 }
 function f (){
   document.getElementById('quiz').innerHTML = `      <h2　id="text1">残念</h2>
       <h2 id="text2" hidden></h2>`
-  document.getElementById('buttons').innerHTML = `        <button id="<button" hidden>右が大</button>
-        <button id=">button" hidden>左が大</button>
-        <button id="m_button">次の問題へ</button>`
+  button1.hidden = false;
+  button2.hidden = true;
+  button3.hidden = true;
+  button1.textContent = "次の問題へ"
   alert("不正解！")
 }
-const button1 = document.getElementById('m_button');
-const button2 = document.getElementById('<button');
-const button3 = document.getElementById('>button');
+
 function create_quiz (){
   var rdm1 = Math.round(Math.random());
   var rdm5 = Math.round(Math.random());
@@ -59,16 +63,16 @@ function create_quiz (){
 };
 function button_push1 (){
   if (button1.textContent == "スタート！"){
-    document.getElementById('buttons').innerHTML = `        <button id="<button">右が大</button>
-        <button id=">button">左が大</button>
-        <button id="m_button" hidden>スタート！</button>`
+    button1.hidden = true;
+    button2.hidden = false;
+    button3.hidden = false;
     create_quiz();
     document.getElementById('quiz').innerHTML = `      <h2　id="text1">どっちが大きい?</h2>
       <h2 id="text2">${quiz1}　${quiz2}</h2>`
   }else if(button1.textContent == "次の問題へ"){    
-    document.getElementById('buttons').innerHTML = `        <button id="<button">右が大</button>
-        <button id=">button">左が大</button>
-        <button id="m_button" hidden>スタート！</button>`
+    button1.hidden = true;
+    button2.hidden = false;
+    button3.hidden = false;
     create_quiz();
     document.getElementById('quiz').innerHTML = `      <h2　id="text1">どっちが大きい?</h2>
       <h2 id="text2">${quiz1}　${quiz2}</h2>`
