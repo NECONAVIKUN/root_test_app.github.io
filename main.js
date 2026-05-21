@@ -5,10 +5,8 @@ let q2 = "";
 const button1 = document.getElementById('m_button');
 const button2 = document.getElementById('<button');
 const button3 = document.getElementById('>button');
-function t (){
-  document.getElementById('buttons').innerHTML = `        <button id="<button" hidden>右が大</button>
-        <button id=">button" hidden>左が大</button>
-        <button id="m_button">次の問題へ</button>`
+function t (){  document.getElementById('quiz').innerHTML = `      <h2　id="text1">おめでとう！</h2>
+      <h2 id="text2" hidden></h2>`
   button1.hidden = false;
   button2.hidden = true;
   button3.hidden = true;
