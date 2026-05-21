@@ -1,7 +1,7 @@
-var quiz1 = "";
-var quiz2 = "";
-var q1 = "";
-var q2 = "";
+let quiz1 = "";
+let quiz2 = "";
+let q1 = "";
+let q2 = "";
 function t (){
   alert("正解！");
 }
@@ -19,32 +19,32 @@ function create_quiz (){
   if (rdm1 == "1"){
     if (rdm5 == "1"){
       var rdm2 = Math.floor( Math.random() * 99) + 1;
-      var quiz1 = "-√" + rdm2;
-      var q1 = "-" + rdm2;
+      let quiz1 = "-√" + rdm2;
+      let q1 = -1*rdm2;
     }else{
       var rdm2 = Math.floor( Math.random() * 99) + 1;
-      var quiz1 = "√" + rdm2;
-      var q1 = rdm2;
+      let quiz1 = "√" + rdm2;
+      let q1 = rdm2;
     };
   } else {
     var rdm2 = Math.floor( Math.random() * 99) + 1;
-    var quiz1 = rdm2;
-    var q1 = rdm2*rdm2;
+    let quiz1 = rdm2;
+    let q1 = rdm2*rdm2;
   };
   if (rdm3 == "1"){
     if (rdm6 == "1"){
       var rdm4 = Math.floor( Math.random() * 99) + 1;
-      var quiz2 = "-√" + rdm4;
-      var q2 = "-" + rdm4;
+      let quiz2 = "-√" + rdm4;
+      let q2 = "-" + rdm4;
     }else{
       var rdm4 = Math.floor( Math.random() * 99) + 1;
-      var quiz2 = "√" + rdm4;
-      var q2 = rdm4;
+      let quiz2 = "√" + rdm4;
+      let q2 = rdm4;
     }
   }else {
     var rdm4 = Math.floor( Math.random() * 99) + 1;
-    var quiz2 = rdm4;
-    var q2 = rdm4*rdm4;
+    let quiz2 = rdm4;
+    let q2 = rdm4*rdm4;
   };
 };
 function button_push1 (){
